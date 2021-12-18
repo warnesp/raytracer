@@ -62,13 +62,13 @@
 #define CANVAS_WIDTH 300
 #define CANVAS_HEIGHT 300
 
-#define SCENE_WIDTH 100
-#define SCENE_HEIGHT 100
+#define SCENE_WIDTH 200
+#define SCENE_HEIGHT 200
 
 #define SPLINE_WIDTH 250
 
 bool show_message = true;
-unsigned int max_ray_depth = 4;
+unsigned int max_ray_depth = 5;
 
 double scene_floor = -SCENE_HEIGHT/2;
 
@@ -374,7 +374,8 @@ void display_func(){
                     (GLdouble) 0, (GLdouble) SCENE_HEIGHT);
         glColor4f(GREEN);
         drawString(1,20, "Press G to begin simulation." );
-        drawString(1,15, "Press X to exit when you are finished viewing the image.");
+        drawString(1,15, "Press L to toggle an extra light.");
+        drawString(1,10, "Press X to exit when you are finished viewing the image.");
         
         glPopMatrix();
         glMatrixMode(GL_MODELVIEW);
